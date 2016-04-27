@@ -1,8 +1,9 @@
 {
   "name": "license-check",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Npm module to check the presence of a specific header in all the files of a project. The plugin give to you a log of all the files where the header is missing. Never miss again a license header in a file.",
   "main": "index.js",
+  "repository": "https://github.com/magemello/license-check",
   "scripts": {
     "test": "xo && mocha",
     "coverage": "istanbul cover _mocha -- -R spec"

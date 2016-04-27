@@ -74,15 +74,15 @@ The license-check-config section is mandatory, without this section the plugin w
 var license = require('license-check');
 
 license.check({
-				src: [
-					'**/*',
-					'/usr/lib',
-					'!./node_modules/**/*'
-				],
-				path: 'header.txt',
-				blocking: false,
-				logInfo: false,
-				logError: true
+	src: [
+		'**/*',
+		'/usr/lib',
+		'!./node_modules/**/*'
+	],
+	path: 'header.txt',
+	blocking: false,
+	logInfo: false,
+	logError: true
 });
 ```
 

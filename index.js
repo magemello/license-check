@@ -43,10 +43,8 @@ module.exports.check = function (config) {
 			folders = getDefaultFolders();
 		}
 
-		console.log(folders);
-
 		var src = vfs.src(folders);
-		src.pipe(license((config)));
+		src.pipe(license(config));
 		return src;
 	}
 

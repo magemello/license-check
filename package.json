@@ -1,0 +1,70 @@
+{
+  "name": "license-check",
+  "version": "1.0.0",
+  "description": "Npm module to check the presence of a specific header in all the files of a project. The plugin give to you a log of all the files where the header is missing. Never miss again a license header in a file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "xo && mocha",
+    "coverage": "istanbul cover _mocha -- -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "repository": "https://github.com/magemello/license-check"
+  },
+  "keywords": [
+    "check",
+    "license",
+    "header"
+  ],
+  "author": {
+    "name": "Mario Romano",
+    "email": "mario.romano83@gmail.com",
+    "url": "http://magemello.github.io/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/magemello/license-check/issues"
+  },
+  "homepage": "https://github.com/magemello/license-check#readme",
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "mocha": "^2.0.1",
+    "should": "*",
+    "xo": "^0.14.0"
+  },
+  "dependencies": {
+    "gulp-license-check": "^1.1.2",
+    "istanbul": "^0.4.3",
+    "gulp-util": "^3.0.7",
+    "pkg-conf": "^1.1.2",
+    "vinyl-fs": "^2.4.3"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "bin": {
+    "license-check": "bin/server.js"
+  },
+  "xo": {
+    "overrides": [
+      {
+        "files": "test/*.js",
+        "rules": {
+          "max-nested-callbacks": 0,
+          "handle-callback-err": 0
+        }
+      }
+    ],
+    "rules": {
+      "no-lonely-if" : 0,
+      "one-var": 0,
+      "padded-blocks": 0,
+      "no-mixed-requires": 0,
+      "quotes": [
+        2,
+        "single",
+        "avoid-escape"
+      ]
+    }
+  }
+}

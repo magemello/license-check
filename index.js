@@ -22,6 +22,7 @@ var path = require('path'),
  */
 module.exports.check = function (config) {
 
+	var mainFolder = __dirname;
 	/**
 	 * Main execution function
 	 *
@@ -42,6 +43,8 @@ module.exports.check = function (config) {
 			folders = getDefaultFolders();
 		}
 
+		console.log(folders);
+
 		var src = vfs.src(folders);
 		src.pipe(license((config)));
 		return src;
@@ -59,12 +62,12 @@ module.exports.check = function (config) {
 		var folders = [];
 		src.forEach(function (entry) {
 			if (entry.charAt(0) === '!') {
-				folders.push(path.join('!' + __dirname, entry.substring(1, entry.length)));
+				folders.push(path.join('!' + mainFolder, entry.substring(1, entry.length)));
 			} else {
 				if (entry.charAt(0) === '/') {
 					folders.push(entry);
 				} else {
-					folders.push(path.join(__dirname, entry));
+					folders.push(path.join(mainFolder, entry));
 				}
 			}
 		});
@@ -80,8 +83,8 @@ module.exports.check = function (config) {
 	 * @returns {string[]} return the default folders.
 	 */
 	function getDefaultFolders() {
-		return [path.join(__dirname, '**/*'),
-				path.join('!' + __dirname, '/node_modules/**/*')];
+		return [path.join(mainFolder, '**/*'),
+				path.join('!' + mainFolder, '/node_modules/**/*')];
 	}
 
 	/**

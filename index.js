@@ -28,7 +28,6 @@ module.exports.check = function (config) {
 	 * @returns {object} return the stream to make possible append pipe or listen on channel such on('data') on('error) .
 	 */
 	function start(config) {
-
 		if (!isConfigurationParametersDefinedCorrectly(config)) {
 			throw new Error('license-check - Configuration error');
 		}
@@ -60,12 +59,12 @@ module.exports.check = function (config) {
 		var folders = [];
 		src.forEach(function (entry) {
 			if (entry.charAt(0) === '!') {
-				folders.push(path.join('!' + process.cwd(), entry.substring(1, entry.length)));
+				folders.push(path.join('!' + __dirname, entry.substring(1, entry.length)));
 			} else {
 				if (entry.charAt(0) === '/') {
 					folders.push(entry);
 				} else {
-					folders.push(path.join(process.cwd(), entry));
+					folders.push(path.join(__dirname, entry));
 				}
 			}
 		});
@@ -81,8 +80,8 @@ module.exports.check = function (config) {
 	 * @returns {string[]} return the default folders.
 	 */
 	function getDefaultFolders() {
-		return [path.join(process.cwd(), '**/*'),
-				path.join('!' + process.cwd(), '/node_modules/**/*')];
+		return [path.join(__dirname, '**/*'),
+				path.join('!' + __dirname, '/node_modules/**/*')];
 	}
 
 	/**

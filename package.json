@@ -56,8 +56,9 @@
       }
     ],
     "rules": {
-      "no-lonely-if" : 0,
+      "no-lonely-if": 0,
       "one-var": 0,
+      "no-path-concat": 0,
       "padded-blocks": 0,
       "no-mixed-requires": 0,
       "quotes": [

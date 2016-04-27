@@ -14,7 +14,6 @@ describe('license-check', function () {
 			var stream = license.check({
 				src: [
 					'**/*',
-					'/usr/lib',
 					'!./node_modules/**/*'
 				],
 				path: 'test/fixture/header.txt',

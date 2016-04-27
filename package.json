@@ -1,6 +1,6 @@
 {
   "name": "license-check",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Npm module to check the presence of a specific header in all the files of a project. The plugin give to you a log of all the files where the header is missing. Never miss again a license header in a file.",
   "main": "index.js",
   "scripts": {

@@ -26,7 +26,7 @@
 
 > license-check is a npm plugin to check the presence of a specific header in all the files of a project, and give to you a log of all the files where the header is missing. Never miss again a license header in a file.
 
->If you want to run this plugin from gulp you can use[gulp-license-check](https://github.com/magemello/gulp-license-check).
+>If you want to run this plugin from gulp you can use [gulp-license-check](https://github.com/magemello/gulp-license-check).
 ## Install
 
 ```

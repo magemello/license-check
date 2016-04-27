@@ -70,7 +70,7 @@ The license-check-config section is mandatory, without this section the plugin w
 
 #### Include it in your node app
 
-```
+```javascript
 var license = require('license-check');
 
 license.check({

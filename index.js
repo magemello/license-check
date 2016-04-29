@@ -22,7 +22,7 @@ var path = require('path'),
  */
 module.exports.check = function (config) {
 
-	var mainFolder = __dirname;
+	var mainFolder = process.cwd();
 	/**
 	 * Main execution function
 	 *

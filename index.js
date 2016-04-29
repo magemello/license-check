@@ -22,7 +22,7 @@ var path = require('path'),
  */
 module.exports.check = function (config) {
 
-	var mainFolder = process.cwd();
+	var mainFolder = process.cwd() || __dirname;
 	/**
 	 * Main execution function
 	 *
@@ -42,6 +42,8 @@ module.exports.check = function (config) {
 			gutil.log('license-check', gutil.colors.red('{src} not defined or empty, the plugin will run with the default configuration: **/*'));
 			folders = getDefaultFolders();
 		}
+
+		console.log(folders);
 
 		var src = vfs.src(folders);
 		src.pipe(license(config));

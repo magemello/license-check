@@ -49,7 +49,7 @@ Add the following lines to your package.json :
 },
 "license-check-config": {
     "src": [
-      "test/**/*",,
+      "test/**/*",
       "src/**/*.js",
       "/usr/lib",
       "index.js",
